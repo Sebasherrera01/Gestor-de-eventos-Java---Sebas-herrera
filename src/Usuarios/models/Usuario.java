@@ -1,6 +1,7 @@
 package Usuarios.models;
 
 public class Usuario {
+    private int userId;
     private String nombre;
     private String correo;
     private String numeroTelefonico;
@@ -8,7 +9,8 @@ public class Usuario {
 
     public Usuario(){}
 
-    public Usuario(String nombre, String correo, String numeroTelefonico, String semestre){
+    public Usuario(int userId, String nombre, String correo, String numeroTelefonico, String semestre){
+        this.userId = userId;
         this.nombre = nombre;
         this.correo = correo;
         this.numeroTelefonico = numeroTelefonico;
@@ -16,6 +18,10 @@ public class Usuario {
     }
 
     // Setters
+    public void setUserId(int userId){
+        this.userId = userId;
+    }
+
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
@@ -33,6 +39,11 @@ public class Usuario {
     }
 
     // Getters
+
+    public int getUserId(){
+        return this.userId;
+    }
+    
     public String getNombre(){
         return this.nombre;
     }

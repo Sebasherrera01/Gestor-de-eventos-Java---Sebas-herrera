@@ -1,6 +1,7 @@
 package Eventos.models;
 
 public class Evento {
+    private int eventoId;
     private String fechaCreacion;
     private String nombre;
     private int cupos;
@@ -8,7 +9,8 @@ public class Evento {
 
     public Evento(){}
 
-    public Evento(String fechaCreacion, String nombre, int cupos, String inscritos){
+    public Evento(int eventoId, String fechaCreacion, String nombre, int cupos, String inscritos){
+        this.eventoId = eventoId;
         this.fechaCreacion = fechaCreacion;
         this.nombre = nombre;
         this.cupos = cupos;
@@ -16,6 +18,10 @@ public class Evento {
     }
 
     // Setters
+    public void setEventoId(int eventoId){
+        this.eventoId = eventoId;
+    }
+
     public void setFechaCreacion(String fechaCreacion){
         this.fechaCreacion = fechaCreacion;
     }
@@ -33,6 +39,11 @@ public class Evento {
     }
 
     // Getters
+
+    public int getEventoId(){
+        return this.eventoId;
+    }
+    
     public String getFechaCreacion(){
         return this.fechaCreacion;
     }
